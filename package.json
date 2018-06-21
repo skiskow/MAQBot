@@ -1,0 +1,19 @@
+{
+  "name": "maqbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "Scott Laskowski",
+  "license": "ISC",
+  "dependencies": {
+    "irc": "^0.5.2",
+    "node-irc": "0.0.4",
+    "tmi.js": "^1.2.1"
+  }
+}
