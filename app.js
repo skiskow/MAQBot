@@ -6,6 +6,7 @@ const fs = require('fs');
 
 //Commands
 var commands = [];
+var uptimeStart;
 
 const client_ID = "wy7ihv9surttczc5loyso4pbfcdf96";
 const streams_URL = "https://api.twitch.tv/helix/streams";
@@ -25,7 +26,7 @@ const fetchArgs = {
 
 fetch(qUrl, fetchArgs)
     .then(res => res.json())
-    .then(data => uptimeStart = data.started_at)
+    .then(data => {if(data != null){uptimeStart = data}})
     .catch(err => console.error(err));
 
 
@@ -89,10 +90,8 @@ var options = {
 
 var client = new tmi.client(options);
 client.connect();
-addCommand('Hiya', function(){
-	client.say("skiskow","Hiya I'm a bot!");
-}
-, false);
+console.log(uptimeStart);
+
 // loadCommands();
 
 var today = new Date();
