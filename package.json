@@ -13,7 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "irc": "^0.5.2",
+    "node-fetch": "^2.1.2",
     "node-irc": "0.0.4",
+    "querystring": "^0.2.0",
     "tmi.js": "^1.2.1"
   }
 }
